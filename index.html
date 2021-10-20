@@ -51,7 +51,20 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="button-order">Заказать услугу</button>
+                <button type="button" class="button-order" data-modal-open>Заказать услугу</button>
+
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <div class="button-close">
+                            <button type="button" class="modal-close" data-modal-close>
+                                <svg class="svg-close" width="11" height="11">
+                                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -388,5 +401,7 @@
                 </div>
             </div>    
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
