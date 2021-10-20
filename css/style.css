@@ -580,11 +580,13 @@ ul {
   background-color: var(--overlay-card-bgcolor);
 
   transform: translateY(100%);
+  opacity: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card .link:hover .proj-overlay,
 .project-card .link:focus .proj-overlay {
   transform: translateY(0%);
+  opacity: 1;
 }
 .proj-overlay p {
   font-weight: normal;
