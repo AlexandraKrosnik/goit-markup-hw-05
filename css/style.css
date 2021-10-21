@@ -52,6 +52,9 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+.main-header {
+  border-bottom: 1px solid var(--border-color);
+}
 .logo-header {
   margin-right: 90px;
 
@@ -122,13 +125,13 @@ ul {
 }
 .svg-header {
   margin-right: 10px;
-  fill: var(--primary-text-color);
+  fill: currentColor;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feedback-inf:hover > .svg-header,
 .feedback-inf:focus > .svg-header {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 .feedback-inf {
   display: flex;
@@ -193,8 +196,14 @@ ul {
   line-height: 1.87;
   border: none;
   border-radius: 4px;
+  letter-spacing: 0.06em;
 
   cursor: pointer;
+}
+
+.button-order:hover,
+.button-order:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* DACKDROP */
 .backdrop {
@@ -324,11 +333,12 @@ ul {
   left: 0;
   bottom: 0;
 
-  padding: 27px 0;
-
-  display: block;
-  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
   width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 .doing-li .text {
   color: var(--primary-white-color);
@@ -418,12 +428,13 @@ ul {
   height: 92px;
 }
 .li-customer a {
+  color: var(--network-color);
   display: flex;
   width: 100%;
   height: 100%;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--network-color);
+  border: 1px solid currentColor;
   border-radius: 4px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -432,17 +443,18 @@ ul {
   margin-right: 30px;
 }
 .svg-customer {
-  fill: var(--network-color);
+  fill: currentColor;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .li-customer a:hover,
 .li-customer a:focus {
-  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  border: 1px solid currentColor;
 }
 .li-customer a:hover .svg-customer,
 .li-customer a:focus .svg-customer {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 /* footer */
 .main-footer {
@@ -507,9 +519,7 @@ ul {
 /* portfolio.html */
 
 /* Header */
-.port-header {
-  border-bottom: 1px solid var(--border-color);
-}
+
 /* radio button */
 .filter-list {
   display: flex;
@@ -581,7 +591,8 @@ ul {
 
   transform: translateY(100%);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card .link:hover .proj-overlay,
 .project-card .link:focus .proj-overlay {
